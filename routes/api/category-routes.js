@@ -25,7 +25,7 @@ router.get("/:id", (req, res) => {
   // find one category by its `id` value
   Category.findOne({
     where: {
-      id: req.perams.id,
+      id: req.params.id,
     },
     attributes: ["id", "category_name"],
     include: [
@@ -36,7 +36,7 @@ router.get("/:id", (req, res) => {
   })
     .then((dbCategoryData) => {
       if (!dbCategoryData) {
-        res.status(404).json({ message: "No post found with this id" });
+        res.status(404).json({ message: "No Category found with this id" });
         return;
       }
       res.json(dbCategoryData);
