@@ -9,8 +9,11 @@ Pull from my remote repo
 
 ## usage
 run the follwing code in your terminal :
+
 npm i
+
 npm run seed
+
 node server
 
 then, through insomnia, add, upodate and delete data
